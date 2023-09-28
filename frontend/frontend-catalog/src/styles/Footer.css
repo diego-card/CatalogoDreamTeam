@@ -1,0 +1,17 @@
+.footer {
+    /* position: relative; */
+    /* bottom: 0; */
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 3%;
+}
+
+.footer a {
+    font-weight: bold;
+    color: white;
+}
+
+.footer a:hover {
+    color:  hsl(217, 71%, 53%);
+}

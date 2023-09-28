@@ -1,0 +1,67 @@
+@import 'bulma/css/bulma.css';
+
+#page {
+  min-height: 100vh;
+}
+
+/* ---------------- */
+.scrollable-ul {
+  max-height: 90%;
+  overflow-y: auto;
+  /* Add a vertical scrollbar when content exceeds the height */
+  padding: 0;
+}
+
+.tester {
+  margin: 1.2% 0 0 5%;
+}
+
+#colecao-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#colecao-center ul {
+  list-style: none;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 25%;
+}
+
+#colecao-center li {
+  padding: 5px;
+  transition: background-color 0.3s;
+  /* Smooth hover transition */
+}
+
+#colecao-center li:hover {
+  background-color: #549fef;
+  cursor: pointer;
+}
+
+#colecao-center a:hover {
+  color: #ffffff;
+}
+
+/* ----------------------------- */
+#info-id {
+  background-color: hsl(0, 0%, 29%);
+  border-radius: 1%;
+  padding: 1.2% 0 1.2% 1.2%;
+  color: rgb(244, 244, 244);
+
+  width: 90%;
+}
+
+#info-id a {
+  font-weight: bold;
+  color: #549fef;
+}
+
+#info-id a:hover {
+  color: hsl(0, 0%, 100%)
+}

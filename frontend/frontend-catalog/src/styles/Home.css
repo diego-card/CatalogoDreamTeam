@@ -1,0 +1,46 @@
+#em-destaque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+h3.stylish-border {
+    color: rgb(255, 194, 40);
+    font-weight: bold;
+    font-size: large;
+    border-bottom: solid 1px;
+}
+
+.columns.is-gapless {
+    padding-top: 1%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.home-div {
+    padding-bottom: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #em-destaque {
+        padding: 3% 0 3% 0;
+    }
+
+    #formCenter {
+        width: 90%;
+    }
+
+    .image.is-96x96 {
+        height: 36px;
+        width: 36px;
+        padding: 0 2% 0 2%;
+    }
+
+    .columns.is-gapless {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+}

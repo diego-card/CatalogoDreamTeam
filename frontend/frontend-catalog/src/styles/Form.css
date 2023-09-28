@@ -1,0 +1,40 @@
+#formCenter {
+    padding-top: 2%;
+    width: 40%;
+}
+
+.container h1 {
+    padding-bottom: 4%;
+}
+
+#formCenter ul {
+    list-style: none;
+    padding: 0;
+}
+
+#formCenter li {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    color: hsl(0, 0%, 96%);
+    background-color: hsl(0, 0%, 21%);
+    padding: 10px;
+}
+
+#formCenter li img {
+    margin-right: 10px;
+}
+
+.input::placeholder {
+    color: hsl(0, 0%, 40%);
+}
+
+.left {
+    margin-right: auto;
+    /* Push to the left */
+}
+
+.right {
+    margin-left: auto;
+    /* Push to the right */
+}

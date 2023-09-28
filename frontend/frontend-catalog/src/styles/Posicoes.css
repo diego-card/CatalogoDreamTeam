@@ -1,0 +1,29 @@
+#colecao-center-posicao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73.3vh;
+    margin-bottom: 6.5%;
+}
+
+#colecao-center-posicao ul {
+    list-style: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 25%;
+}
+
+#colecao-center-posicao li {
+    padding: 5px;
+    /* Add padding for spacing inside each <li> */
+    transition: background-color 0.3s;
+    /* Smooth hover transition */
+}
+
+#colecao-center-posicao li:hover {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}

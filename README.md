@@ -1,0 +1,1 @@
+Use `npm run dev` on both the backend and frontend

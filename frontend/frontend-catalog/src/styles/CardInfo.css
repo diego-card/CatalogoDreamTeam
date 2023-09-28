@@ -1,0 +1,73 @@
+.containeru {
+    background-color: #f0f0f0;
+    min-height: 300px;
+    /* Set a minimum height to create space for content */
+    padding: 10px;
+    /* Add padding for spacing inside the container */
+    margin: 1.2% 23% 0 23%;
+}
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the child divs */
+.card-image,
+.kolumns,
+.card-table {
+    padding: 1%;
+}
+
+#teamLogoMiddle {
+    vertical-align: sub;
+}
+
+table {
+    width: 290px;
+    /* width: 100%; */
+}
+
+.table a {
+    color: hsl(171, 100%, 43%);
+    font-weight: bold;
+}
+
+.kolumns {
+    height: 15em;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.kolumns span {
+    color: whitesmoke;
+    font-size: large;
+}
+
+.label {
+    float: left;
+    margin-right: 10%;
+}
+
+.value {
+    float: right;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .containeru {
+        width: 90%;
+        margin: 5%;
+        padding: 0;
+    }
+    
+    .kolumns {
+        height: 30rem;
+    }
+
+    .side-by-side {
+        flex-direction: column;
+    }
+}
