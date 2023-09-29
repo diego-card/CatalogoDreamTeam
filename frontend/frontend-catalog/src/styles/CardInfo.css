@@ -35,6 +35,11 @@ table {
     font-weight: bold;
 }
 
+.table a:hover {
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
 .kolumns {
     height: 15em;
     width: 90%;

@@ -5,7 +5,7 @@ import cors from 'cors'
 const app = express()
 const tursoAuthToken = process.env.TURSO_TOKEN
 const tursoUrl = process.env.TURSO_URL
-
+import helmet from 'helmet'
 import { createClient } from "@libsql/client";
 
 const client = createClient({
@@ -13,7 +13,15 @@ const client = createClient({
     authToken: `${tursoAuthToken}`
 });
 
+
 app.use(cors())
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: false
+//   })
+// )
+// Displaying the dist folder as static is not working correctly
+// app.use(express.static('dist'))
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -31,7 +39,7 @@ app.get('/cards/goleiros', async (req, res) => {
     res.json(cards.rows)
 })
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
 })

@@ -28,7 +28,7 @@ const ColecaoInfo = ({ cards, bandeiras }) => {
     }
 
     return (
-        <div>
+        <div id="adjust-view-height">
             <table className="table tester" id="info-id">
                 <tbody>
                     {displayedCards.map(card => (
@@ -74,7 +74,7 @@ const ColecaoInfo = ({ cards, bandeiras }) => {
                     ))}
                 </tbody>
             </table>
-            
+
             <nav className="pagination is-small" role="navigation">
                 <div className="pagination-list">
                     {Array.from({ length: totalPages }, (_, index) => (
@@ -92,14 +92,6 @@ const ColecaoInfo = ({ cards, bandeiras }) => {
 
 
     )
-
-    // return (
-    //     <div>
-    //         {filteredCards.map(card => (
-    //             <li key={card.id}>Nome: <a href={`/carta/${card.id}`}>{card.nome}</a>. Coleção: {card.colecao}</li>
-    //         ))}
-    //     </div>
-    // )
 }
 
 export default ColecaoInfo

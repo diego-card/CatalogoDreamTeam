@@ -1,5 +1,5 @@
 import axios from 'axios'
-const apiUrl = 'https://cdtbackend.fly.dev/cards/goleiros'
+const apiUrl = 'https://restcountries.com/v3.1/all?fields=name,flags,translations'
 
 const getAll = () => {
     const request = axios.get(apiUrl)

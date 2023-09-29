@@ -19,6 +19,7 @@ h3.stylish-border {
 }
 
 .home-div {
+    height: 82vh;
     padding-bottom: 1%;
 }
 
@@ -30,6 +31,11 @@ h3.stylish-border {
 
     #formCenter {
         width: 90%;
+    }
+
+    .home-div {
+        height: 100vh;
+        padding-bottom: 1%;
     }
 
     .image.is-96x96 {

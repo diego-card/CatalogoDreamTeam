@@ -28,7 +28,7 @@ const PaisInfo = ({ cards, bandeiras }) => {
     }
 
     return (
-        <div>
+        <div id="adjust-view-height">
             <table className="table tester" id="info-id">
                 <tbody>
                     {displayedCards.map(card => (

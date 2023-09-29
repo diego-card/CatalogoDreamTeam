@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import jogadorService from '../../../backend/services/jogadores'
-import bandeiraService from '../../../backend/services/bandeiras'
-import goleiroService from '../../../backend/services/goleiros';
+// import jogadorService from '../../../backend/services/jogadores'
+// import bandeiraService from '../../../backend/services/bandeiras'
+// import goleiroService from '../../../backend/services/goleiros';
+import jogadorService from '../services/jogadores'
+import bandeiraService from '../services/bandeiras'
+import goleiroService from '../services/goleiros'
 import Home from './pages/Home';
 import Colecoes from './pages/Colecoes';
 import ColecaoInfo from './components/ColecaoInfo'
@@ -31,7 +34,7 @@ function App() {
       goleiroService.getAll().then(goleiros => {
         const combinedData = [...jogadores, ...goleiros]
         combinedData.sort((a, b) => b.habilidade - a.habilidade);
-        setCards(combinedData)
+        setCards(combinedData);
         setIsLoading(false)
       })
     })
@@ -40,9 +43,9 @@ function App() {
         setIsLoading(false)
       });
 
-      bandeiraService.getAll().then(bandeiras =>{
-        const tudo = [...bandeiras]
-        setBandeiras(tudo)
+    bandeiraService.getAll().then(bandeiras => {
+      const tudo = [...bandeiras]
+      setBandeiras(tudo)
     })
   }, []); // Empty dependency array to run the effect only once.
 

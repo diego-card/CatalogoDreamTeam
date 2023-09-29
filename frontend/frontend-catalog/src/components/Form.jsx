@@ -7,7 +7,6 @@ import { TeamList } from "../helpers/TeamList"
 
 const Form = ({ cards, bandeiras }) => {
     const [searchTerm, setSearchTerm] = useState('')
-
     const filteredData = cards.filter(card =>
         card.nome.toLowerCase().includes(searchTerm.toLowerCase())
     )
@@ -18,7 +17,6 @@ const Form = ({ cards, bandeiras }) => {
         const value = event.target.value
         setSearchTerm(value)
     }
-
 
     const navigate = useNavigate()
 
