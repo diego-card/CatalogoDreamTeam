@@ -4,14 +4,16 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { correctFlag, correctLogo, textClass } from "../helpers/helperFunctions"
 import { TeamList } from "../helpers/TeamList"
+import { useMediaQuery } from 'react-responsive';
 
 const PosicaoInfo = ({ cards, bandeiras }) => {
     const position = useParams()
     const filteredCards = cards.filter(card => card.posicao === position.posicao)
-    console.log(position)
     const [currentPage, setCurrentPage] = useState(1)
     const itemsPerPage = 15
     const [displayedCards, setDisplayedCards] = useState([])
+
+    const isMobile = useMediaQuery({ maxWidth: 768 });
 
     useEffect(() => {
         const startIndex = (currentPage - 1) * itemsPerPage;
@@ -35,6 +37,7 @@ const PosicaoInfo = ({ cards, bandeiras }) => {
                     {displayedCards.map(card => (
 
                         card.posicao === 'Goleiro' ? (
+
                             <tr key={card.id}>
                                 <td>
                                     <img src={correctLogo(card.time, TeamList)} width={15} height={15} id="teamLogoMiddle"></img> <img src={correctFlag(card.nacionalidade, bandeiras)} width={20} height={20}></img> <a href={`/carta/${card.id}`}>{card.nome}</a>
@@ -42,14 +45,17 @@ const PosicaoInfo = ({ cards, bandeiras }) => {
                                 <td className={`${textClass(card.overall)}`}>{card.overall}</td>
                                 <td>{card.posicao}</td>
                                 <td>{card.colecao}</td>
-                                <td>{card.preco}</td>
-
-                                <td className={`${textClass(card.alcance)}`}>{card.alcance}</td>
-                                <td className={`${textClass(card.reflexo)}`}>{card.reflexo}</td>
-                                <td className={`${textClass(card.conducao)}`}>{card.conducao}</td>
-                                <td className={`${textClass(card.explosao)}`}>{card.explosao}</td>
-                                <td className={`${textClass(card.reposicao)}`}>{card.reposicao}</td>
-                                <td className={`${textClass(card.posicionamento)}`}>{card.posicionamento}</td>
+                                {!isMobile && (
+                                    <>
+                                        <td>{card.preco}</td>
+                                        <td className={`${textClass(card.alcance)}`}>{card.alcance}</td>
+                                        <td className={`${textClass(card.reflexo)}`}>{card.reflexo}</td>
+                                        <td className={`${textClass(card.conducao)}`}>{card.conducao}</td>
+                                        <td className={`${textClass(card.explosao)}`}>{card.explosao}</td>
+                                        <td className={`${textClass(card.reposicao)}`}>{card.reposicao}</td>
+                                        <td className={`${textClass(card.posicionamento)}`}>{card.posicionamento}</td>
+                                    </>
+                                )}
                                 <td>{card.habilidade}</td>
                             </tr>
 
@@ -61,14 +67,17 @@ const PosicaoInfo = ({ cards, bandeiras }) => {
                                 <td className={`${textClass(card.overall)}`}>{card.overall}</td>
                                 <td>{card.posicao}</td>
                                 <td>{card.colecao}</td>
-                                <td>{card.preco}</td>
-
-                                <td className={`${textClass(card.passe)}`}>{card.passe}</td>
-                                <td className={`${textClass(card.drible)}`}>{card.drible}</td>
-                                <td className={`${textClass(card.desarme)}`}>{card.desarme}</td>
-                                <td className={`${textClass(card.finalizacao)}`}>{card.finalizacao}</td>
-                                <td className={`${textClass(card.velocidade)}`}>{card.velocidade}</td>
-                                <td className={`${textClass(card.resistencia)}`}>{card.resistencia}</td>
+                                {!isMobile && (
+                                    <>
+                                        <td>{card.preco}</td>
+                                        <td className={`${textClass(card.passe)}`}>{card.passe}</td>
+                                        <td className={`${textClass(card.drible)}`}>{card.drible}</td>
+                                        <td className={`${textClass(card.desarme)}`}>{card.desarme}</td>
+                                        <td className={`${textClass(card.finalizacao)}`}>{card.finalizacao}</td>
+                                        <td className={`${textClass(card.velocidade)}`}>{card.velocidade}</td>
+                                        <td className={`${textClass(card.resistencia)}`}>{card.resistencia}</td>
+                                    </>
+                                )}
                                 <td>{card.habilidade}</td>
                             </tr>
                         )

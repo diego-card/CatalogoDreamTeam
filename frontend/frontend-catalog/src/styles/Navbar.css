@@ -1,3 +1,15 @@
 .navbar-item {
     font-size: 120%;
 }
+
+@media only screen and (max-width: 1023px) {
+    .navbar a {
+        background-color: hsl(0, 0%, 21%);
+        color: hsl(0, 0%, 96%);
+        font-weight: bold;
+    }
+
+    #navbarBasicExample {
+        background-color: hsl(0, 0%, 21%);
+    }
+}
