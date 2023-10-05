@@ -11,5 +11,7 @@ export const CollectionList = [
     'Herois',
     'Aniversario',
     'Nostalgicos',
-    'Lendas'
+    'Lendas',
+    'Champions League',
+    'Europa League'
 ]

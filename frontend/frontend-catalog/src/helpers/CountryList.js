@@ -42,5 +42,7 @@ export const CountryList = [
     'Coreia do Sul',
     'Turquia',
     'Chequia',
-    'Suecia'
+    'Suecia',
+    'Albania',
+    'Panama'
 ]

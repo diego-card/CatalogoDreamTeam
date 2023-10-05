@@ -206,5 +206,9 @@ export const TeamList = [
     {
         team: 'Volta Redonda',
         code: 'XZRwXvVZnhAp5DMbFJ8RfDqt4fwQ1fr5BCSy'
+    },
+    {
+        team: 'Famalicao',
+        code: 'XZe4OvVZFvfJya98lTmAz4Gwa1btv5iyj2PV'
     }
 ]
